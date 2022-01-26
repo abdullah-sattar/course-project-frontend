@@ -12,7 +12,7 @@
         border: 1px solid $secondary-color;
         border-radius: 8px;
         padding: 8px;
-        width: 5rem;
+        width: 4rem;
         text-align: center;
         background-color: $secondary-color;
 
@@ -22,4 +22,11 @@
             border-color: #1d3557;
         }
     }
+}
+
+@media screen and (min-width: 768px)  {
+    .navbar__link {
+        width: 6rem;
+    }
+    
 }

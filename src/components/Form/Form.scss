@@ -1,0 +1,49 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+
+.form-container {
+  background-color: $primary-color;
+  height: 100vh;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    > input {
+      border-radius: 6px;
+    }
+
+    > button {
+      border-radius: 6px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-container {
+    
+    &__form {
+      gap: 2rem;
+    }
+
+    h2 {
+      padding: 4rem;
+    }
+  }
+
+  input {
+    min-width: 20rem;
+  }
+
+  button {
+    min-width: 5rem;
+  }
+}
