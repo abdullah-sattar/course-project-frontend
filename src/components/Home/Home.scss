@@ -2,15 +2,43 @@
 @import "../../assets/styles/typography.scss";
 
 .home {
-    background-color: $primary-color;
-    height: 100vh;
+  background-color: $primary-color;
+  min-height: 100vh;
 
-    
+  &__title {
+    margin: 0;
+    text-align: center;
+    padding-top: 13rem;
+    color: #1d3557;
+  }
 
-    &__title {
-        margin: 0;
-        text-align: center;
-        padding-top: 2rem;
-        color: #1d3557;
-    }
+  &__intro {
+    text-align: center;
+    margin: 2rem;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .home {
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__intro {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__intro {
+      font-size: 21px;
+    }
+  }
+}
+

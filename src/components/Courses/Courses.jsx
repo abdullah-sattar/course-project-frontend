@@ -1,29 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Courses.scss";
-import CourseCard from "../CourseCard/CourseCard";
 
 const Courses = (props) => {
-  const { courses } = props;
-
-  const courseJSX = courses.map((course) => {
-    return (
-      <>
-        <CourseCard
-          key={course.id}
-          name={course.name}
-          category={course.category}
-          location={course.location}
-          cost={course.price}
-          duration={course.duration}
-          summary={course.summary}
-        />
-      </>
-    );
-  });
-
-  return <div className="courses">
-    {courseJSX}
-  </div>;
+  const { name, id } = props;
+  return (
+    <div className="card">
+      <h2 className="card__item">{name}</h2>
+      <Link to={`/courses/${id}`}>
+        <button className="card__btn">More Info</button>
+      </Link>
+    </div>
+  );
 };
 
 export default Courses;

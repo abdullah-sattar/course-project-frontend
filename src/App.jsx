@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./components/Home/Home";
 import Form from "./components/Form/Form";
-import Courses from "./components/Courses/Courses";
+import CourseList from "./components/CourseList/CourseList";
 import NavBar from "./components/NavBar/NavBar";
+import CourseCard from "./components/CourseCard/CourseCard";
 
 const App = () => {
 
@@ -14,7 +15,6 @@ const App = () => {
     fetch("http://localhost:8080/courses")
       .then(response => response.json())
       .then(courses => {
-        console.log(courses);
         setCoursesArr(courses);
       })
       .catch((err) => console.log(err));
@@ -25,8 +25,9 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses courses={coursesArr} />} />
+        <Route path="/courses" element={<CourseList courses={coursesArr} />} />
         <Route path="/add-course" element={<Form />} />
+        <Route path="/courses/:id" element={<CourseCard />} />
       </Routes>
     </Router>
   );

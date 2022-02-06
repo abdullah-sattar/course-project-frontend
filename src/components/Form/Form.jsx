@@ -28,7 +28,7 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h2>Add A New Course</h2>
+      <h1>Add A New Course</h1>
       <form className="form-container__form" onSubmit={handleSubmit}>
         <input
           type="text"

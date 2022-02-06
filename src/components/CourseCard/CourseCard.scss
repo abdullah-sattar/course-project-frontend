@@ -1,19 +1,10 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/typography.scss";
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #457b9d;
-    border-radius: 10px;
-    padding: 10px;
-    min-width: 15rem;
-    margin: 5vh;
-
-
-    &__item {
-        color: $secondary-color;
-      
-    }
+.courseCard {
+  background-color: $primary-color;
+  height: 100vh;
+  padding: 10rem;
+  display: flex;
+  justify-content: center;
 }

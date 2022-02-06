@@ -1,0 +1,10 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/typography.scss";
+
+.courses {
+    background-color: $primary-color;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
