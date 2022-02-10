@@ -1,6 +1,6 @@
 import React from "react";
 import "./CourseList.scss";
-import CourseCard from "../Courses/Courses";
+import Courses from "../Courses/Courses";
 
 const CourseList = (props) => {
   const { courses } = props;
@@ -8,7 +8,7 @@ const CourseList = (props) => {
   const courseJSX = courses.map((course) => {
     return (
       <>
-        <CourseCard
+        <Courses
           key={course.id}
           name={course.name}
           id={course.id}
