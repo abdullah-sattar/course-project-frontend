@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./components/Home/Home";
 import Form from "./components/Form/Form";
@@ -21,7 +21,7 @@ const App = () => {
   }, [coursesArr]);
 
   return (
-    <Router>
+    <HashRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/add-course" element={<Form />} />
         <Route path="/courses/:id" element={<CourseCard />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 };
 
